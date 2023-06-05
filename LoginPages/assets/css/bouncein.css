@@ -1,0 +1,108 @@
+﻿html, body,form
+{
+  height:100%;
+  margin:0;
+  padding:0;
+  overflow-x:hidden;
+}
+ 
+.container-fluid
+{
+  height:100%;
+  display:table;
+  width: 100%;
+  padding:0;  
+}
+ 
+.container-fluid:after
+{
+  content:none;
+}
+ 
+.container-fluid:before
+{
+  content:none;
+}
+
+/*Page Background defined here*/
+.row-fluid 
+{
+  height: 100%; 
+  display:table-cell; 
+  vertical-align: middle;     
+}
+ 
+.centering 
+{
+  float:none;
+  margin:0 auto;
+  padding:10px;  
+}
+
+.drop-shadow 
+{
+    /*position:relative;*/
+    /*float:left;*/
+    width:100%;
+    padding:0;
+    /*margin:2em 10px 4em;*/
+    background:#fff;
+    -webkit-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    -moz-box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+    box-shadow:0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset
+}
+
+.drop-shadow:before,
+.drop-shadow:after 
+{
+   content:"";
+   position:absolute;
+   z-index:-2;
+}        
+        
+.raised 
+{
+   -webkit-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+   -moz-box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+   box-shadow: 0 15px 10px -10px rgba(0, 0, 0, 0.5), 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+        
+input { font-family: 'FontAwesome' !important; } /* This is for the placeholder */
+
+.textbox
+{
+    width:100%;
+    padding:17px 20px;
+    border:none;
+    background:transparent;
+    font-family: 'FontAwesome', Candara; 
+    position:relative;
+    font-size:24px;
+    font-weight:bold;    
+}
+.btn-login-base
+{
+    width:32px;
+    height:34px;
+    padding:0;
+    background:transparent;
+    border:none;
+    color:#fff;    
+}
+
+.radial-center 
+{ /* fallback */ 
+  background-color: #413636; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  /* Safari 4-5, Chrome 1-9 */ /* Can't specify a percentage size? Laaaaaame. */ 
+  background: -webkit-gradient(radial, center center, 0, center center, 460, from(#D52B48), to(#413636)); 
+  /* Safari 5.1+, Chrome 10+ */ 
+  background: -webkit-radial-gradient(circle, #D52B48, #413636); 
+  /* Firefox 3.6+ */ 
+  background: -moz-radial-gradient(circle, #D52B48, #413636); 
+  /* IE 10 */ 
+  background: -ms-radial-gradient(circle, #D52B48, #413636);   
+ }  
+
+ 

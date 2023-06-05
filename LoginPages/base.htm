@@ -1,0 +1,81 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+    <script src="/assets/js/Vendor/jQuery-2.1.1.js" type="text/javascript"></script>
+    <script src="/assets/js/Vendor/bootstrap.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            $("#txtUsername").val('');
+            $("#txtPassword").val('');
+            $("#txtUsername").focus(); //focus on Username textbox after page load
+
+            //Submit form on 'Enter key' press also
+            $("input").keypress(function (event) {
+                if (event.which == 13) {
+                    event.preventDefault();
+                    $("#btnLogin").click();
+                }
+            });
+
+            //Submit form
+            $(document).on("submit", "#LoginForm", function () {
+                var username = $("#txtUsername").val();
+                var password = $("#txtPassword").val();
+
+                if (username == "admin" && password == "pass") {
+                    window.location = "http://www.google.com";
+                }
+                else {
+                    $("#spMsg").show().html("Incorrect Username / Password");
+                    $("#txtPassword").val('').focus();
+                }
+                return false;
+            });
+
+            //Remove Error Message
+            $(document).on("keydown", "#txtUsername", function () {
+                $("#spMsg").hide();
+            });
+
+            //Remove Error Message
+            $(document).on("keydown", "#txtPassword", function () {
+                $("#spMsg").hide();
+            });
+
+
+        });  //End Document.Ready
+    </script>
+    <link href="/assets/css/Vendor/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="/assets/css/Vendor/Animate.css" rel="stylesheet"
+        type="text/css" />
+    <link href="/assets/css/base.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <form id="LoginForm">
+    <div class="container-fluid">
+        <div class="row-fluid">
+            <div class="centering text-center col-lg-3 clearfix">
+                <div class="drop-shadow raised">
+                    <input type="text" placeholder="&#61447;" class="textbox" id="txtUsername" required />
+                </div>
+                <br />
+                <div class="drop-shadow raised">
+                    <input type="password" placeholder="&#xf084;" class="textbox" id="txtPassword" required />
+                </div>
+                <br />
+                <span id="spMsg"></span>
+                <button type="submit" id="btnLogin" class="btn-login-base pull-right">
+                    <i class="fa fa-share-square" style="font-size: 35px;"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+    </form>
+    <!------------##############################################################################--------------------------------->
+</body>
+</html>
